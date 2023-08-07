@@ -1,27 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
+} */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	/* color: rgb(var(--foreground-rgb));
+	background-color: rgb(var(--background-end-rgb)); */
+	font-family: "Poppins", "sans-serif";
+	transition: background-color 0.25s ease;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* .dark body { 
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+} */
+
+.header a {
+	transition: all 0.25s ease-in-out;
+}
+.header a::after {
+	content: "";
+	background-color: rgb(8 145 178);
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	width: 1.25rem;
+	height: 4px;
+	transform: translateX(-50%);
+	border-radius: 1rem 1rem 0 0;
+	opacity: 0;
+	transition: opacity 0.25s ease-in-out;
+}
+.tab-active {
+	position: relative;
+	font-weight: 500;
+}
+.tab-active::after {
+	opacity: 1 !important;
 }

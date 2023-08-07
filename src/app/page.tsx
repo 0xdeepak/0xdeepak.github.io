@@ -1,113 +1,115 @@
-import Image from 'next/image'
+"use client";
+import { useEffect } from "react";
+import { useThemeContext } from "@/hooks/useTheme";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	const { theme } = useThemeContext()!;
+	return (
+		<div className="mt-10">
+			<div className="px-4 pt-7 pb-5 text-black text-xs flex flex-col relative items-start rounded-md bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-200 dark:bg-zinc-900 dark:border-zinc-700">
+				<h1 className="text-[2.5rem] tracking-tight leading-10 mb-7 dark:text-white">
+					Deepak Yadav
+				</h1>
+				<h3 className="px-3 py-2 relative sm:absolute sm:top-4 sm:right-4 rounded-md bg-zinc-300  dark:bg-zinc-800">
+					Software Engineer
+				</h3>
+				<div className="flex items-center flex-wrap gap-y-3 mt-2">
+					<div className="px-4 py-2 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-zinc-800">
+						<Link href="mailto:node.deepak@gmail.com">
+							<Image
+								src={theme === "light" ? "/email-light.svg" : "/email-dark.svg"}
+								alt="LinkedIn"
+								width={21}
+								height={21}
+								className=" rounded overflow-hidden"
+							/>
+						</Link>
+						<Link href="https://www.linkedin.com/in/0xdeepak/" target="_blank">
+							<Image
+								src={
+									theme === "light"
+										? "/linkedin-light.svg"
+										: "linkedin-dark.svg"
+								}
+								alt="LinkedIn"
+								width={16}
+								height={16}
+								className="ml-3 rounded-sm overflow-hidden"
+							/>
+						</Link>
+						<Link href="https://github.com/0xdeepak" target="_blank">
+							<Image
+								src={
+									theme === "light" ? "/github-light.svg" : "/github-dark.svg"
+								}
+								alt="Github"
+								width={17}
+								height={17}
+								className="ml-3"
+							/>
+						</Link>
+					</div>
+					<h4 className="px-3 py-2 ml-3 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-zinc-800">
+						<Image
+							src={
+								theme === "light" ? "/location-light.svg" : "/location-dark.svg"
+							}
+							alt="Location"
+							width={16}
+							height={16}
+							className="mr-2 -mt-px"
+						/>
+						<p className="-mb-px">Bangalore, Karnataka</p>
+					</h4>
+				</div>
+			</div>
+			<div className="mt-8 px-4 py-6 text-sm  flex flex-col items-start rounded-md bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-900 dark:border-zinc-700">
+				<h2 className="font-medium text-xl dark:text-white">About me</h2>
+				<p className="mt-6 [word-spacing:2px]">
+					Hello, I'm a passionate Software Engineer based in Bangalore,
+					Karnataka. I recently graduated in the 2023 with a degree in Computer
+					Science and Engineering. My expertise lies in building dynamic web
+					applications using a range of cutting-edge technologies, including{" "}
+					<span className="font-semibold">JavaScript</span>,{" "}
+					<span className="font-semibold">TypeScript</span>,{" "}
+					<span className="font-semibold">React</span>,{" "}
+					<span className="font-semibold">Next.js</span>,{" "}
+					<span className="font-semibold">NodeJs</span>,{" "}
+					<span className="font-semibold">Firebase</span>, and{" "}
+					<span className="font-semibold">MongoDB</span>.
+				</p>
+				<p className="mt-4 [word-spacing:2px]">
+					Beyond coding, I have a curious and creative nature. Besides my
+					passion for software development, I dabble in music and rap. I'm a big
+					fan of EDM, Rock, and Hip-Hop music, which keeps my creative juices
+					flowing.
+				</p>
+				<p className="mt-4 [word-spacing:2px]">
+					I like to work in a team and present my solutions. I'm always looking
+					for ways to learn and become a better professional, as my drive to
+					learn and create continually motivates me to deliver high-quality
+					applications and explore new horizons in the world of software
+					development.
+				</p>
+				<p className="mt-2">
+					&#128640; Currently Looking for frontend / fullstack developer roles.
+				</p>
+				<Link
+					href="https://drive.google.com/file/d/1ujARZ3eawXznQH8YyhLo7ksmA_FTG81T/view?usp=sharing"
+					target="_blank"
+					className="mt-5  flex font-semibold dark:font-medium"
+				>
+					<Image
+						src={theme === "light" ? "/arrow-light.svg" : "arrow-dark.svg"}
+						alt="Resume"
+						width={20}
+						height={20}
+					/>
+					See Resume
+				</Link>
+			</div>
+		</div>
+	);
 }
