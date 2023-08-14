@@ -39,7 +39,7 @@ body {
 } */
 
 .header a {
-	transition: all 0.25s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .header a::after {
 	content: "";
@@ -52,7 +52,7 @@ body {
 	transform: translateX(-50%);
 	border-radius: 1rem 1rem 0 0;
 	opacity: 0;
-	transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
 }
 .tab-active {
 	position: relative;

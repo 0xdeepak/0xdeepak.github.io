@@ -24,9 +24,9 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="dark text-sm sm:text-base">
 			<body
-				className={` text-black tracking-wide bg-zinc-100 dark:text-white dark:bg-black`}
+				className={`text-black tracking-wide bg-zinc-100 dark:text-white dark:bg-zinc-950`}
 			>
-				<div className="max-w-3xl mx-auto my-16 px-7">
+				<div className="max-w-4xl mx-auto my-16 px-7">
 					<ThemeProvider>
 						<Header />
 						{children}
