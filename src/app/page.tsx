@@ -8,7 +8,7 @@ export default function Home() {
   const { theme } = useThemeContext()!;
   return (
     <div className="mt-10">
-      <div className="px-5 pt-8 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-800 dark:border-zinc-700">
+      <div className="px-5 pt-8 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-800 dark:border-zinc-600">
         <h1 className="text-[2.75rem] tracking-tight leading-10 mb-6 dark:text-white">
           Deepak Yadav
         </h1>
@@ -19,7 +19,11 @@ export default function Home() {
           <div className="px-4 py-2 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-neutral-700">
             <Link href="mailto:node.deepak@gmail.com">
               <Image
-                src={theme === "light" ? "/email-light.svg" : "/email-dark.svg"}
+                src={
+                  theme === "light"
+                    ? "/icons/email-light.svg"
+                    : "/icons/email-dark.svg"
+                }
                 alt="LinkedIn"
                 width={21}
                 height={21}
@@ -30,8 +34,8 @@ export default function Home() {
               <Image
                 src={
                   theme === "light"
-                    ? "/linkedin-light.svg"
-                    : "linkedin-dark.svg"
+                    ? "/icons/linkedin-light.svg"
+                    : "/icons/linkedin-dark.svg"
                 }
                 alt="LinkedIn"
                 width={16}
@@ -42,11 +46,13 @@ export default function Home() {
             <Link href="https://github.com/0xdeepak" target="_blank">
               <Image
                 src={
-                  theme === "light" ? "/github-light.svg" : "/github-dark.svg"
+                  theme === "light"
+                    ? "/icons/github-light.svg"
+                    : "/icons/github-dark.svg"
                 }
                 alt="Github"
-                width={17}
-                height={17}
+                width={theme === "light" ? 18 : 17}
+                height={theme === "light" ? 18 : 17}
                 className="ml-3"
               />
             </Link>
@@ -54,7 +60,9 @@ export default function Home() {
           <h4 className="px-3 py-2 ml-3 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-neutral-700">
             <Image
               src={
-                theme === "light" ? "/location-light.svg" : "/location-dark.svg"
+                theme === "light"
+                  ? "/icons/location-light.svg"
+                  : "/icons/location-dark.svg"
               }
               alt="Location"
               width={16}
@@ -65,7 +73,7 @@ export default function Home() {
           </h4>
         </div>
       </div>
-      <div className="mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-700">
+      <div className="mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-600">
         <h2 className="font-medium text-2xl dark:text-white">About me</h2>
         <p className="mt-6 [word-spacing:2px]">
           Hello, I'm a passionate Software Engineer based in Bangalore,
@@ -102,7 +110,11 @@ export default function Home() {
           className="mt-5  flex font-semibold dark:font-medium"
         >
           <Image
-            src={theme === "light" ? "/arrow-light.svg" : "arrow-dark.svg"}
+            src={
+              theme === "light"
+                ? "/icons/arrow-light.svg"
+                : "/icons/arrow-dark.svg"
+            }
             alt="Resume"
             width={20}
             height={20}
