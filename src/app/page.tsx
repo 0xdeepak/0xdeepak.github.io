@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 import { useThemeContext } from "@/hooks/useTheme";
 import Image from "next/image";
 import Link from "next/link";
@@ -76,10 +75,10 @@ export default function Home() {
       <div className="mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-600">
         <h2 className="font-medium text-2xl dark:text-white">About me</h2>
         <p className="mt-6 [word-spacing:2px]">
-          Hello, I'm a passionate Software Engineer based in Bangalore,
+          {`Hello, I'm a passionate Software Engineer based in Bangalore,
           Karnataka. I recently graduated in the 2023 with a degree in Computer
           Science and Engineering. My expertise lies in building dynamic web
-          applications using a range of cutting-edge technologies, including{" "}
+          applications using a range of cutting-edge technologies, including `}
           <span className="font-semibold">JavaScript</span>,{" "}
           <span className="font-semibold">TypeScript</span>,{" "}
           <span className="font-semibold">React</span>,{" "}
@@ -89,17 +88,17 @@ export default function Home() {
           <span className="font-semibold">MongoDB</span>.
         </p>
         <p className="mt-4 [word-spacing:2px]">
-          Beyond coding, I have a curious and creative nature. Besides my
+          {`Beyond coding, I have a curious and creative nature. Besides my
           passion for software development, I dabble in music and rap. I'm a big
           fan of EDM, Rock, and Hip-Hop music, which keeps my creative juices
-          flowing.
+          flowing.`}
         </p>
         <p className="mt-4 [word-spacing:2px]">
-          I like to work in a team and present my solutions. I'm always looking
+          {`I like to work in a team and present my solutions. I'm always looking
           for ways to learn and become a better professional, as my drive to
           learn and create continually motivates me to deliver high-quality
           applications and explore new horizons in the world of software
-          development.
+          development.`}
         </p>
         <p className="mt-2">
           &#128640; Looking for frontend / fullstack developer roles.
