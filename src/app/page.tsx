@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Home() {
   const { theme } = useThemeContext()!;
   return (
-    <div className="mt-10">
-      <div className="px-5 pt-8 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-800 dark:border-zinc-600">
-        <h1 className="text-[2.75rem] tracking-tight leading-10 mb-6 dark:text-white">
+    <div className="mt-6 sm:mt-8">
+      <div className="px-5 pt-7 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-800 dark:border-zinc-600">
+        <h1 className="text-[2.75rem] tracking-tight leading-10 mb-7 dark:text-white">
           Deepak Yadav
         </h1>
         <h3 className="px-3 py-2 relative sm:absolute sm:top-4 sm:right-4 rounded-md bg-zinc-300  dark:bg-neutral-700">
@@ -56,7 +56,7 @@ export default function Home() {
               />
             </Link>
           </div>
-          <h4 className="px-3 py-2 ml-3 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-neutral-700">
+          <h4 className="px-3 py-2 ml-2 h-9 flex items-center rounded-md bg-zinc-300 dark:bg-neutral-700">
             <Image
               src={
                 theme === "light"
@@ -72,7 +72,7 @@ export default function Home() {
           </h4>
         </div>
       </div>
-      <div className="mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-600">
+      <div className="mt-5 sm:mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-600">
         <h2 className="font-medium text-2xl dark:text-white">About me</h2>
         <p className="mt-6 [word-spacing:2px]">
           {`Hello, I'm a passionate Software Engineer based in Bangalore,

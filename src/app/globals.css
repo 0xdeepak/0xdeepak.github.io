@@ -6,9 +6,9 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -20,18 +20,18 @@
 } */
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	/* color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
 	background-color: rgb(var(--background-end-rgb)); */
-	font-family: "Poppins", "sans-serif";
-	transition: background-color 0.25s ease;
-	background-repeat: no-repeat;
-	background-size: cover;
+  font-family: "Poppins", "sans-serif";
+  transition: background-color 0.25s ease;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* .dark body { 
 	color: rgb(255, 255, 255);
@@ -39,25 +39,25 @@ body {
 } */
 
 .header a {
-	transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .header a::after {
-	content: "";
-	background-color: rgb(8 145 178);
-	position: absolute;
-	left: 50%;
-	top: 100%;
-	width: 1.25rem;
-	height: 4px;
-	transform: translateX(-50%);
-	border-radius: 1rem 1rem 0 0;
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
+  content: "";
+  background-color: #0d99ff;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1.25rem;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 1rem 1rem 0 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 .tab-active {
-	position: relative;
-	font-weight: 500;
+  position: relative;
+  font-weight: 500;
 }
 .tab-active::after {
-	opacity: 1 !important;
+  opacity: 1 !important;
 }

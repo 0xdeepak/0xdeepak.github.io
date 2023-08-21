@@ -9,7 +9,7 @@ export default function Projects() {
   const { theme } = useThemeContext()!;
 
   return (
-    <div className="mt-10 /px-5 /pt-9 pb-16 text-sm rounded-lg /bg-zinc-200 /border border-zinc-300 text-black dark:font-light dark:text-zinc-200 /dark:bg-zinc-900 dark:border-zinc-800">
+    <div className="mt-8 pb-16 text-sm rounded-lg text-black dark:font-light dark:text-zinc-200">
       <h2 className="text-[1.75rem] font-medium dark:text-white">Projects</h2>
       <div className="mt-14 max-w-3xl mx-auto sm:px-5 grid grid-cols-1 sm:grid-cols-2 gap-5 ">
         {ProjectsData.map((project) => (

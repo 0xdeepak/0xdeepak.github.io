@@ -6,7 +6,7 @@ export default function Experience() {
   const { theme } = useThemeContext()!;
 
   return (
-    <div className="mt-10 /pl-5 /pr-4 /pt-9 pb-16 text-sm rounded-lg /bg-zinc-200 /border border-zinc-300 text-black  dark:text-zinc-200 /dark:bg-zinc-900 dark:border-zinc-700">
+    <div className="mt-8 /pl-5 /pr-4 /pt-9 pb-16 text-sm rounded-lg /bg-zinc-200 /border border-zinc-300 text-black  dark:text-zinc-200 /dark:bg-zinc-900 dark:border-zinc-700">
       <h2 className="text-[1.75rem] mb-2 font-medium dark:text-white">Experience</h2>
       <div className="mt-16 flex justify-center">
         <div className="max-w-lg ml-3 grow border-l border-l-zinc-600">
