@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useThemeContext } from "@/hooks/useTheme";
+import { motion } from "motion/react";
 import { useEffect } from "react";
 
 export default function Header() {
@@ -19,14 +20,22 @@ export default function Header() {
       : "";
 
   return (
-    <div className="">
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.75, delay: 0.5, ease: "easeOut" }}
+      className=""
+    >
       <div className="h-[72px] flex justify-between items-center px-2 pt-6 pb-2 mb-2">
         <img
           src={theme === "light" ? "/icons/logo-light.svg" : "/icons/logo.svg"}
           alt="Deepak Yadav"
           className="h-8 w-8"
         />
-        <button onClick={changeTheme} className="h-[38px] w-[38px] p-2 border rounded-md border-zinc-300 dark:border-zinc-800">
+        <button
+          onClick={changeTheme}
+          className="h-[38px] w-[38px] p-2 border rounded-md border-zinc-300 dark:border-zinc-800"
+        >
           <img
             src={
               theme === "light"
@@ -64,6 +73,6 @@ export default function Header() {
           Skills
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

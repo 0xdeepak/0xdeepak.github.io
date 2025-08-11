@@ -2,15 +2,26 @@
 import { useThemeContext } from "@/hooks/useTheme";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function Home() {
   const { theme } = useThemeContext()!;
   return (
     <div className="mt-6 sm:mt-8">
-      <div className="px-5 pt-7 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-900 dark:border-zinc-700">
-        <h1 className="text-[2.75rem] tracking-tight leading-10 mb-7 dark:text-white">
+      <motion.div
+        initial={{ y: -75, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+        className="px-5 pt-7 pb-5 text-black text-xs flex flex-col relative items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:text-zinc-100 dark:bg-zinc-900 dark:border-zinc-700"
+      >
+        <motion.h1
+          initial={{ y: 0, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+          className="text-[2.75rem] tracking-tight leading-10 mb-7 dark:text-white"
+        >
           Deepak Yadav
-        </h1>
+        </motion.h1>
         <h3 className="px-3 py-2 relative sm:absolute sm:top-4 sm:right-4 rounded-md bg-zinc-300  dark:bg-zinc-800">
           Software Engineer
         </h3>
@@ -71,8 +82,13 @@ export default function Home() {
             <p className="-mb-px">Bangalore, Karnataka</p>
           </h4>
         </div>
-      </div>
-      <div className="mt-5 sm:mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-800 dark:border-zinc-700">
+      </motion.div>
+      <motion.div
+        initial={{ y: 75, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0, ease: "easeOut" }}
+        className="mt-5 sm:mt-7 pl-5 pr-4 py-6 text-sm  flex flex-col items-start rounded-lg bg-zinc-200 border border-zinc-300 text-black dark:font-light dark:text-zinc-200 dark:bg-zinc-900 dark:border-zinc-700"
+      >
         <h2 className="font-medium text-2xl dark:text-white">About me</h2>
         <p className="mt-6 [word-spacing:2px]">
           {`Hello, I'm a passionate Software Engineer based in Bangalore,
@@ -104,7 +120,7 @@ export default function Home() {
           &#128640; Looking for frontend / fullstack developer roles.
         </p>
         <Link
-          href="https://drive.google.com/file/d/1Rf23LgNCiXj4EtRLaI_BtqhcmvCxqtAQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1AlLyVIItIuGkzjDcx5Qs8CAmzYaHiHBh/view?usp=sharing"
           target="_blank"
           className="mt-5  flex font-semibold dark:font-medium"
         >
@@ -120,7 +136,7 @@ export default function Home() {
           />
           See Resume
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }

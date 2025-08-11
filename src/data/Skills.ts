@@ -39,16 +39,16 @@ const SkillsData = {
       logo: "/icons/nodejs.svg",
     },
     {
+      name: "React Native",
+      logo: "/icons/react-native.svg"
+    },
+    {
       name: "Flutter",
       logo: "/icons/flutter.svg",
     },
     {
       name: "MongoDB",
       logo: "/icons/mongodb.svg"
-    },
-    {
-      name: "Docker",
-      logo: "/icons/docker.svg"
     }
   ],
 };
